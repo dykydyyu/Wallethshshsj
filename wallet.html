@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wallet LuxID - محفظتي</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="wallet-container">
+        <header class="wallet-header">
+            <div class="logo-container">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNjAgMTBMMzAgNDAgNDAgNTAgMTAgODAgMzAgOTAgNjAgNjAgODAgOTAgOTAgODAgNjAgNTAgODAgNDAgNjAgMTB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+" alt="LuxID Logo" class="logo">
+                <h1>Wallet LuxID</h1>
+            </div>
+            <div class="user-actions">
+                <span id="welcome-user" class="welcome-user">مرحباً، المدير</span>
+                <button id="wallet-logout" class="logout-btn">تسجيل الخروج</button>
+            </div>
+        </header>
+        
+        <div class="wallet-summary">
+            <div class="total-balance">
+                <h2>إجمالي الرصيد</h2>
+                <p id="total-balance">$100,000.00</p>
+            </div>
+            <div class="wallet-actions">
+                <button id="add-currency-btn" class="action-btn">إضافة عملة</button>
+                <button id="refresh-btn" class="action-btn">تحديث البيانات</button>
+            </div>
+        </div>
+        
+        <main class="wallet-main">
+            <section class="currencies-section">
+                <h2>العملات المحفوظة</h2>
+                <div class="currencies-table">
+                    <table id="currencies-table">
+                        <thead>
+                            <tr>
+                                <th>العملة</th>
+                                <th>الكمية</th>
+                                <th>القيمة بالدولار</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="currencies-list">
+                            <!-- سيتم ملؤها بالجافاسكريبت -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+            
+            <section class="add-currency-form hidden" id="add-currency-form">
+                <h2>إضافة عملة جديدة</h2>
+                <form id="currency-form">
+                    <div class="input-group">
+                        <label for="currency-name">اسم العملة</label>
+                        <input type="text" id="currency-name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="currency-amount">الكمية</label>
+                        <input type="number" id="currency-amount" required>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" id="cancel-add" class="cancel-btn">إلغاء</button>
+                        <button type="submit" class="add-btn">إضافة</button>
+                    </div>
+                </form>
+            </section>
+        </main>
+        
+        <footer class="wallet-footer">
+            <p>© 2025 LuxID. جميع الحقوق محفوظة | الإصدار 1.0.0</p>
+            <p>Wallet LuxID - نظام إدارة المحافظ للمدراء</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
