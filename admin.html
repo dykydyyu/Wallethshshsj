@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Wallet LuxID - لوحة التحكم</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="admin-container">
+        <header class="admin-header">
+            <div class="logo-container">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIj48cGF0aCBkPSJNNjAgMTBMMzAgNDAgNDAgNTAgMTAgODAgMzAgOTAgNjAgNjAgODAgOTAgOTAgODAgNjAgNTAgODAgNDAgNjAgMTB6IiBmaWxsPSIjZmZmIi8+PC9zdmc+" alt="LuxID Logo" class="logo">
+                <h1>لوحة التحكم - Wallet LuxID</h1>
+            </div>
+            <div class="admin-actions">
+                <button id="logout-btn" class="logout-btn">تسجيل الخروج</button>
+            </div>
+        </header>
+        
+        <main class="admin-main">
+            <section class="admin-section">
+                <h2>إنشاء حساب مدير جديد</h2>
+                <form id="create-account-form">
+                    <div class="input-group">
+                        <label for="new-username">اسم المستخدم</label>
+                        <input type="text" id="new-username" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="new-password">كلمة المرور</label>
+                        <input type="password" id="new-password" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="confirm-password">تأكيد كلمة المرور</label>
+                        <input type="password" id="confirm-password" required>
+                    </div>
+                    
+                    <button type="submit" class="create-btn">إنشاء حساب</button>
+                </form>
+            </section>
+            
+            <section class="admin-section">
+                <h2>حسابات المدراء</h2>
+                <div class="accounts-table">
+                    <table id="managers-table">
+                        <thead>
+                            <tr>
+                                <th>اسم المستخدم</th>
+                                <th>تاريخ الإنشاء</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="managers-list">
+                            <!-- سيتم ملؤها بالجافاسكريبت -->
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+        
+        <footer class="admin-footer">
+            <p>© 2025 LuxID. جميع الحقوق محفوظة | الإصدار 1.0.0</p>
+            <p>نظام الأمان - متاح فقط للمشرفين المعتمدين</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
